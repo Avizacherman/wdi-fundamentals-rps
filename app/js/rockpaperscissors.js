@@ -20,7 +20,6 @@ function randomPlay() {
 ////////////////////////////////////////////////
 /*           Write Your Code Below            */
 ////////////////////////////////////////////////
-
 function getPlayerMove(move) {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
@@ -37,9 +36,9 @@ function getComputerMove(move) {
 
 function getWinner(playerMove,computerMove) {
     var winner;
-    if ((playerMove === 'rock' && computerMove === 'scissors') || (playerMove === 'scissors' && computerMove === 'paper') || (playerMove === 'paper' && computerMove === 'rock') {
+    if ((playerMove === 'rock' && computerMove === 'scissors') || (playerMove === 'scissors' && computerMove === 'paper') || (playerMove === 'paper' && computerMove === 'rock')) {
         winner = 'Player';
-    } else if ((playerMove === 'scissors' && computerMove === 'rock') || (playerMove === 'paper' && computerMove === 'scissors') || (playerMove === 'rock' && computerMove === 'paper') {
+    } else if ((playerMove === 'scissors' && computerMove === 'rock') || (playerMove === 'paper' && computerMove === 'scissors') || (playerMove === 'rock' && computerMove === 'paper')) {
         winner = 'Computer';
     } else {
         winner = 'tie';
@@ -56,18 +55,16 @@ function playToFive() {
     var playerWins = 0;
     var computerWins = 0;
     // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
-    while (playerWins < 5 || computerWins <5) {
-        playerMove = getPlayerMove ();
-        computerMove = getComputerMove();
-        winner = getWinner(playerMove, computerMove);
-        if (winner = 'Player'){
+    while (playerWins < 5 && computerWins < 5) {
+        var playerMove = getPlayerMove ();
+        var computerMove = getComputerMove();
+        var winner = getWinner(playerMove, computerMove);
+        if (winner === 'Player'){
             playerWins += 1;
-        } else if (winner='Computer') {
+        } else if (winner ==='Computer') {
             computerWins += 1;
-        }
+        } 
     }
 
     }
-    return [playerWins, computerWins];
-}
-
+   
